@@ -1,4 +1,4 @@
-# Jeopardy
+# Welcom to Jeppy
 A multiplayer Jeopardy-style browser game using Angular and WebSockets.
 
 ## Questions
