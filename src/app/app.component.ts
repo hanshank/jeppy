@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Game } from 'src/app/components/models/game';
+
 
 @Component({
   selector: 'app-root',
@@ -6,15 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = 'jeopardy';
-  age: number = 27;
+  playerName: string;
+  gameCode: string;
+  gameStarted: boolean = false;
+  game: Game;
 
-  constructor() {
-    this.title = 'Jeopardy';
-    this.changeAge(30);
+  generateGameId() {
+    return 'slapthatbass';
   }
 
-  changeAge(age: number): void {
-    this.age = age;
+  startGame(playerName: string) {
+    this.gameStarted = true;
+    this.game = new Game(playerName);
+    console.log(this.game);
   }
+
+
 }

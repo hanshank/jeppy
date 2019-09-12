@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3F48CC;
+}
+
+:root {
+  --white: rgb(253, 253, 253);
+  --yellow: #FFC90E;
+}
+
+.vertical-divider {
+  width: 2px;
+  background: var(--white);
+  height: 100%;
+}

@@ -1,0 +1,21 @@
+<div class="game-setup-screen">
+  <h1 class="welcome-message">WELCOME TO JEPPY</h1>
+  <div class="game-setup-option">
+    <div class="game-type-selectors">
+      <button class="game-selector-btn" (click)="showHostForm()">Host Game</button>
+      <div class="vertical-divider"></div>
+      <button class="game-selector-btn" (click)="showJoinForm()">Join Existing</button>
+    </div>
+
+    <form id="game-setup-form" *ngIf="hostGame" (ngSubmit)="onHostFormSubmit(hostForm)" #hostForm="ngForm" novalidate>
+      <input class="text-input" name="playerName" placeholder="Enter desired player name" [(ngModel)]="model.name" />
+      <button type="submit" class="submit-button">CREATE GAME</button>
+    </form>
+
+    <form id="game-setup-form" *ngIf="!hostGame" (ngSubmit)="onJoinFormSubmit()" #f="ngForm" novalidate>
+      <input class="text-input" name="player" placeholder="Enter desired player name" ngModel />
+      <input class="text-input" type="text" placeholder="Enter game code" ngModel>
+      <button type="submit" class="submit-button">CREATE GAME</button>
+    </form>
+  </div>
+</div>

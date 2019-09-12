@@ -1,0 +1,48 @@
+.game-setup-screen {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.game-setup-options {
+  width: 50%;
+}
+
+.game-type-selectors {
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome-message {
+  color: var(--yellow);
+}
+
+.game-selector-btn {
+  background: none;
+  border: none;
+  color: var(--yellow);
+  outline: none;
+  cursor: pointer;
+}
+
+
+.text-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.submit-button {
+  outline: none;
+  cursor: pointer;
+  background: var(--yellow);
+  border: none;
+  color: var(--white);
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
